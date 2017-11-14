@@ -15,11 +15,32 @@ public class SegundaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_segunda);
 
         Intent intent = getIntent();
-        String Nome = (String) intent.getSerializableExtra("Nome");
+        String nome = (String) intent.getSerializableExtra("nome");
+        String salarioH = (String) intent.getSerializableExtra("salarioH");
+        String numero = (String) intent.getSerializableExtra("numero");
 
-        TextView txtNome = (TextView) findViewById(R.id.txt_nome);
-        txtNome.setText("Ola "+Nome+" seja bem vindo");
+        TextView printNome =  findViewById(R.id.printNome);
+        TextView printSalario =  findViewById(R.id.printSalario);
+        TextView printIR =  findViewById(R.id.printIR);
+        TextView printINSS =  findViewById(R.id.printINSS);
+        TextView printSindicato =  findViewById(R.id.printSindicato);
+        TextView printSLiquido =  findViewById(R.id.printSLiquido);
 
+        double decSalarioH = Double.parseDouble(salarioH);
+        double decNumero = Double.parseDouble(numero);
+
+        double salarioBruto = decSalarioH*decNumero;
+        double IR = salarioBruto*0.11;
+        double INSS = salarioBruto*0.08;
+        double sindicato = salarioBruto*0.05;
+        double sLiquido = salarioBruto - IR - INSS - sindicato;
+
+        printNome.setText("Nome: "+nome);
+        printSalario.setText("a.+Salário Bruto: R$ "+salarioBruto);
+        printIR.setText("b.-IR (11%): R$ "+IR);
+        printINSS.setText("c.-INSS (8%): R$ "+INSS);
+        printSindicato.setText("d.-Sindicato (5%): R$ "+sindicato);
+        printSLiquido.setText("e.= Salário Líquido: R$ "+sLiquido);
 
     }
 }

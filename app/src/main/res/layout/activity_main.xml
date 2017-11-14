@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Salário por hora"
-        android:inputType="textPersonName" />
+        android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/txt_numero"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Número de horas trabalhadas"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/btn_calcular"

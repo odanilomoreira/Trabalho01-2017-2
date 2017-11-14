@@ -20,17 +20,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        txtNome = (EditText) findViewById(R.id.txt_nome);
-        txtSalario = (EditText) findViewById(R.id.txt_salario);
-        txtNumero = (EditText) findViewById(R.id.txt_numero);
-        btnCalcular = (Button) findViewById(R.id.btn_calcular);
+        txtNome = findViewById(R.id.txt_nome);
+        txtSalario = findViewById(R.id.txt_salario);
+        txtNumero = findViewById(R.id.txt_numero);
+        btnCalcular = findViewById(R.id.btn_calcular);
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SegundaActivity.class);
-                intent.putExtra("txtNome",txtNome.getText().toString());
+                intent.putExtra("nome",txtNome.getText().toString());
+                intent.putExtra("salarioH", txtSalario.getText().toString());
+                intent.putExtra("numero", txtNumero.getText().toString());
                 startActivity(intent);
             }
         });
