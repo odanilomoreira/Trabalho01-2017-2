@@ -7,4 +7,39 @@
     android:orientation="vertical"
     tools:context="com.example.isabela.trabalho01_2017_2.SegundaActivity">
 
+    <TextView
+        android:id="@+id/printNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome" />
+
+    <TextView
+        android:id="@+id/printSalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salario Bruto" />
+
+    <TextView
+        android:id="@+id/printIR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IR" />
+
+    <TextView
+        android:id="@+id/printINSS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSS" />
+
+    <TextView
+        android:id="@+id/printSindicato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sindicato" />
+
+    <TextView
+        android:id="@+id/printSLiquido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salario Liquido" />
 </LinearLayout>
